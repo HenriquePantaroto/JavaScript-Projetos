@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        input#txtn1 {
+            background-color: lightskyblue;
+            color: orangered;
+        }
+        input#txtn2 {
+            background-color: lightskyblue;
+            color: orangered;
+        }
+        div#res {
+            margin-top: 20px; /* Este comando auxilia para dar espaço entre o resultado e os campos de adição de número. */
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando Números</h1>
+    <hr>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2"> =
+    <input type="button" value="Somar" onclick="somar()"> 
+    <input type="button" value="Substrair" onclick="subtrair()">
+    <input type="button" value="Multiplicar" onclick="multi()">
+    <input type="button" value="Dividir" onclick="dividir()">
+    <div id="res">Resultado</div>
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre o número ${n1} e o número ${n2} é <strong>${s}</strong>.`
+        }
+        function subtrair() {
+            var tn3 = window.document.getElementById('txtn1')
+            var tn4 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n3 = Number(tn3.value)
+            var n4 = Number(tn4.value)
+            var su = n3 - n4
+            res.innerHTML = `A subtração entre o número ${n3} e o número ${n4} é <strong>${su}</strong>.`
+        }
+        function multi() {
+            var tn5 = window.document.getElementById('txtn1')
+            var tn6 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n5 = Number(tn5.value)
+            var n6 = Number(tn6.value)
+            var mu = n5 * n6
+            res.innerHTML = `A multiplicação entre o número ${n5} e o número ${n6} é <strong>${mu}</strong>.`
+        }
+        function dividir() {
+            var tn7 = window.document.getElementById('txtn1')
+            var tn8 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n7 = Number(tn7.value)
+            var n8 = Number(tn8.value)
+            var d = n7 / n8
+            res.innerHTML = `A subtração entre o número ${n7} e o número ${n8} é <strong>${d}</strong>.`
+        }
+
+
+            /* Uso de Crase muito importante para fazer com que o comando ${} funcione. */
+    </script>
+
+    </body>
+</html>
